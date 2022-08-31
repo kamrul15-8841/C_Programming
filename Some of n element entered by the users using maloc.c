@@ -5,6 +5,8 @@ int main()
     int n,i,*ptr,sum = 0;
     printf("Enter number of elements: ");
     scanf("%d",&n);
+    //Difference between malloc and calloc is malloc multiply with size and calloc dont multiply only uses comma instead
+    ptr = (int*)malloc(n*sizeof(int));
     ptr = (int*)calloc(n,sizeof(int));
 
     if(ptr == NULL)
